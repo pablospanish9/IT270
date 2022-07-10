@@ -1,0 +1,40 @@
+<?php get_header(); ?>
+<!-- the index.php is assigned to the blog page -->
+<!-- If we have posts or pages, show them!: -->
+<div id="wrapper">
+
+<main>
+    <?php if(have_posts()) : ?>
+        <!-- We show the posts by using a while loop in the 
+        world of PHP: -->
+    <?php while (have_posts()) : the_post() ; ?>
+    <article class="post">
+        <h2 class="title">
+            
+                <?php the_title (); ?>
+         
+        </h2>
+
+        <div clas="meta">
+            <SPAN><B>Posted By:</B><?php the_author();?></SPAN>
+            <SPAN><B>Posted On:</B><?php the_time('F j,Y g:i a');?></SPAN>
+        </div>   <!-- close meta -->
+        
+        <?php the_content(); ?>
+        
+
+    </article>   <!-- close article -->
+    <?php endwhile; ?>
+    <?php else : ?>
+        <h2>
+    <?php echo wpautop('Sorry, no posts were found!'); ?>
+    </h2>
+    <?php endif; ?>
+    <?php comments_template(); ?>
+</main> 
+
+<aside>
+    
+</aside>
+</div>  <!-- close wrapper -->
+<?php get_footer(); ?>
