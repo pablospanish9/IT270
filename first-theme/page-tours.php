@@ -1,13 +1,15 @@
 <?php get_header(); ?>
-<!-- Template Name: Front Page -->
+<!-- Template Name: Tours -->
+
 
 <!-- background hero image -->
-        <div id="hero">
-        <img src="<?php echo get_template_directory_uri();?>/images/yellowstone-header-home.jpg" alt="Yellowstone">
+<div id="hero">
+        <img src="<?php echo get_template_directory_uri();?>/images/yellowstone-inner.jpg" alt="Yellowstone">
         </div>    <!-- end hero -->
 
-<div id="wrapper">
 
+<div id="wrapper">
+<main>
 <!-- If we have posts or pages, show them!: -->
     <?php if(have_posts()) : ?>
         <!-- We show the posts by using a while loop in the 
@@ -20,6 +22,14 @@
     <?php echo wpautop('Sorry, no posts were found!'); ?>
     </h2>
     <?php endif; ?>
+
+</main>
+
+<aside>
+
+
+</aside>
+
 </div>  <!-- close wrapper -->
 
 <?php get_footer(); ?>

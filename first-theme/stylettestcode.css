@@ -74,10 +74,6 @@ header {
     margin:20px auto;
 }
 
-.error404 #wrapper, .search #wrapper {
-	margin: 140px auto 0 auto;
-}
-
 main {
     width: 62%;
     float: left;
@@ -334,7 +330,6 @@ label {
 		position: static;
 		background:none ;
 		padding: 0px;
-		width: auto;
 	}
 /* end my own navigation styles */
 	.primary-nav li a {

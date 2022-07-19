@@ -1,6 +1,11 @@
 <?php get_header(); ?>
 <!-- the index.php is assigned to the blog page -->
 <!-- If we have posts or pages, show them!: -->
+
+<div id="hero">
+        <img src="<?php echo get_template_directory_uri();?>/images/yellowstone-inner.jpg" alt="Yellowstone">
+        </div>    <!-- end hero -->
+        
 <div id="wrapper">
 
 <main>

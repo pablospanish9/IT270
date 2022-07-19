@@ -11,46 +11,11 @@ Date: July 2022
 }
 body{
     background:bisque ;
-	font-family: Verdana, Geneva, Tahoma, sans-serif;
-	font-size: 100%;
-}
-
-#hero {
-	background: red;
-}
-
-.home #hero {
-	background-image:url(https://pabsep2.dreamhosters.com/sites/IT270/site1/wp-content/uploads/yellowstone-header-home.jpg ) ;
-	background-attachment: fixed;
-	background-size: 100%;
-	background-position: 0 100px;
-	min-height: 550px;
-	max-width: 100%;
-	background-repeat: no-repeat ;
-}
-
-/* this is the background image: */
-#hero img {
-    display: none;
-}
-
-.inner-page #hero {
-	background-image:url(https://pabsep2.dreamhosters.com/sites/IT270/site1/wp-content/uploads/yellowstone-inner.jpg) ;
-	
-	background-attachment: fixed;
-	background-size: 100%;
-	background-position: 0 100px;
-	min-height: 350px;
-	max-width: 100%;
-	background-repeat: no-repeat ;
 }
 
 header {
     background: yellow;
-	position: fixed;
-	top: 0;
-	left: 0;
-	width: 100%;
+
 }
 #top {
     padding: 10px 40px 10px 10px;
@@ -65,17 +30,16 @@ header {
 	clear: both;
 }
 
-
-
+/* this is the background image: */
+#hero {
+    height: 400px;
+    background: red;
+}
 
 
 #wrapper {
     max-width: 1200px;
     margin:20px auto;
-}
-
-.error404 #wrapper, .search #wrapper {
-	margin: 140px auto 0 auto;
 }
 
 main {
@@ -101,8 +65,7 @@ footer {
 
 #site-navigation {
 	float: right;
-	margin-bottom: 4px; 
-	/* try without this margin-bottom */
+	margin-bottom: 4px;
 }
 
 #site-navigation li {
@@ -136,45 +99,9 @@ footer {
 }
 
 /* classes and ids*/
-/* mistery, the following is in teacher's css, what is it?
-.thumbmail {
-	margin-bottom: 15px;
-}
-
-.not-thumbnail img {
-	width:500px;
-	height: 100%;
-	margin-bottom: 15px;
-} */
 
 .screen-reader-text {
 	display: none;
-}
-
-.post, .posts {
-	margin-bottom: 25px;
-}
-
-meta {
-	margin-bottom: 10px;
-}
-
-.block {
-	display: block;
-	font-style: italic;
-}
-
-.search .pagetitle {
-	margin-bottom: 10px;
-}
-
-.searching-box {
-	width: 62%;
-	float: left;
-}
-
-img {
-	max-width: 100%;
 }
 
 p {
@@ -187,30 +114,14 @@ p {
 
 /* typography */
 
-p {
-	margin-bottom: 20px;
-	line-height: 1.4;
-}
-
-p + .block {
-	margin: -10 0 10px 0;
-}
-
 .title {
     font-size:2em;
-	margin-bottom: 10px;
 }
 
 .meta span {
   display:block;  
   font-style: italic;
 }
-
-h1, h2, h3 {
-	font-family: playfair, seirf;
-	color:brown;
-}
-
 /* comment form css */
 
 #commentform {
@@ -243,24 +154,6 @@ label {
 
 /* the beginning of our media queries */
 
-@media screen and (max-width:1450px) {
-	.home #hero {
-		background-image: none;
-		margin-top: 100px;
-		min-height: auto;
-	
-	}
-
-	.inner-page #hero {
-		background-image: none;
-		margin-top: 100px;
-		min-height: auto;
-	}
-
-	#hero img {
-		display: block;
-	}
-}
 
 @media only screen and (max-width: 700px) {
 
@@ -334,7 +227,6 @@ label {
 		position: static;
 		background:none ;
 		padding: 0px;
-		width: auto;
 	}
 /* end my own navigation styles */
 	.primary-nav li a {
