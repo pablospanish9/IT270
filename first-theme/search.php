@@ -61,10 +61,7 @@ No content for:
     <?php endif; ?>
 </main> 
 
-
-<aside>
-   <p>This is my search.php page! </p>
-</aside>  
+<?php get_sidebar(); ?>
 
 </div>  <!-- close wrapper -->
 <?php get_footer(); ?>

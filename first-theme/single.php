@@ -30,7 +30,7 @@
 
     </article>   <!-- close article -->
     <?php endwhile; ?>
-    <?php else : ?>
+    <?php else : ?>  
         <h2>
     <?php echo wpautop('Sorry, no posts were found!'); ?>
     </h2>
@@ -38,8 +38,9 @@
     <?php comments_template(); ?>
 </main> 
 
-<aside>
-    
-</aside>
+
+     <?php get_sidebar();?>  
+
+
 </div>  <!-- close wrapper -->
 <?php get_footer(); ?>

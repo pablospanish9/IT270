@@ -54,10 +54,12 @@ Search Results"
     <?php endif; ?>
 </main> 
 
+<?php get_sidebar(); ?>
 
-<aside>
+<!-- <aside>
+
    <p>This is my index.php page! </p>
-</aside>  
+</aside>   -->
 
 </div>  <!-- close wrapper -->
 <?php get_footer(); ?>
