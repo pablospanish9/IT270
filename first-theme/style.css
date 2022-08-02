@@ -67,30 +67,45 @@ header {
 	clear: both;
 }
 
+#olacalor {
+	color: #085A65;
+	font-size: 2.2em;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	padding: 20px 0 25px 0;
+	/* text-align: center; */
+}
+
 /* footer */
 
 .inner-footer {
     max-width:1200px ;
     margin: 0 auto;
-    /* background:tan ; */
-	padding: 10px  0 ;
-	clear: both;
+    background:#ccc;
+	/* padding: 10px  0 ;
+	clear: both; */
 }
 
 .inner-footer .third {
 	text-align: center;
+	background:#ccc;
 }
 
 .inner-footer ul {
 	height: 60px;
 	line-height: 60px;
 	font-size: .875em;
-	color: #999;
+	color:#804c1e;
 	list-style-type: none;
 }
 
 .inner-footer a {
-	color: #999;
+	color: #804c1e;
+}
+
+.inner-footer li {
+	float: left;
+	margin-right: 30px;
+    list-style-type: none;
 }
 
 .inner-specials {
@@ -99,14 +114,10 @@ header {
 	padding: 3%;
 }
 
-.inner-footer li {
-	float: left;
-	margin-right: 25px;
-}
-
 .row {
 	overflow: hidden;
 	margin-bottom: 20px;
+	/* background-color: #ccc; */
 }
 
 .third {
@@ -154,7 +165,7 @@ aside {
     /* background: rgb(218, 204, 204); */
 }
 footer {
-    background: #eee;
+    background: #ccc;
     padding-top: 20px;
     clear:both;
 }
@@ -250,6 +261,20 @@ main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
 	margin-bottom: 15px;
 }
 
+.blog main 
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image,
+.category main
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image,
+.search main 
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image,
+.archive main 
+.attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
+	width: auto;
+	height: auto;
+	margin-bottom: 0px;
+}
+
+
 /* The following style was not in teacher's: */
 
 #top #searchform {
@@ -258,14 +283,26 @@ main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
 
 /* typography */
 
+blockquote {
+	font-size: 1.75em;
+	font-family: playfair,serif;
+	margin: 0 6% 20px 6%;
+	font-style: italic;
+	line-height: 1.2;
+	text-align: center;
+	
+}
+
 /* In our aside, add background color to headline h3 */
 
 .home h1 {
 	font-size: 3em;
 	text-align: center;
 	margin-bottom: 14px;
+
 }
 
+/* This is style for the "Read More" inside the thirds in footer: */
 .third span a {
 	display: block;
 	color: brown;
@@ -278,31 +315,42 @@ main .attachment-post-thumbnail.size-post-thumbnail.wp-post-image {
 	font-size: .92em;
 }
 
+.inner-footer h2 {
+	font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+	font-size: 2.2em;
+	margin-bottom: 10px;
+	color: brown;
+	text-align: center;
+}
 .third h3 {
 	font-size: 1.8em;
 	margin-bottom: 10px;
-	color: #f28d34;
+	color: brown;
 }
 
 
 /* Style widgets */
 
 .inner-widget h3 {
-	background: #f28d35;
+	background: #c7dbdd;
 	font-size: 1.4em;
 	padding: 3%;
-	color: #fff;
+	color:#834517;
 	margin-bottom: 12px;
 }
 
 .inner-tours h3 {
 	font-size: 1.4em;
-	color: #f28d35;
+	color: #b46622;
 }
 
 .inner-tours {
 	background:#ccc;
 	padding: 3%;
+}
+
+.inner-tours p {
+	margin-bottom: 0;
 }
 
 .textwidget {
@@ -314,6 +362,14 @@ aside ul {
 	margin-left: 5%;
 	margin-bottom: 12px;
 	list-style-type: none;
+}
+
+.blog aside li, 
+.category aside  li,
+.search aside li,
+.archive aside li,
+.post-template-default aside  li {
+	margin-bottom: 5px;
 }
 
 p {
@@ -336,8 +392,33 @@ p + .block {
 }
 
 h1, h2, h3 {
-	font-family: playfair, seirf;
-	color:brown;
+	font-family: Verdana, Geneva, Tahoma, sans-serif;
+	color:#615634;
+}
+
+.contact h1 {
+	text-align: center;
+}
+
+.front-page h2 {
+	text-align: center;
+	padding-bottom: 20px;
+}
+
+.ola-de-calor h2 {
+	color: #834517;
+	font-size: 1.4em;
+	font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+.ola-de-calor h3 {
+	color: #834517;
+	font-size: 1.2em;
+	font-family:Verdana, Geneva, Tahoma, sans-serif ;
+}
+
+.ola-de-calor img {
+	box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 a {
@@ -374,6 +455,28 @@ label {
     margin-left: 30px;
 }
 
+/* Formidable forms CSS */
+.frm_form_title {
+	font-size: 1.5em !important;
+	background: none !important;
+	color: #834517 !important;
+}
+
+.frm_button_submit {
+	background: #085A65 !important;
+}
+
+/* contact form */
+
+.contact .frm_form_title {
+	text-align: center !important;
+}
+
+.frm_fields_container {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
 /* the beginning of our media queries */
 
 @media screen and (max-width:1450px) {
@@ -408,8 +511,90 @@ label {
 	}
 }
 
+
+@media only screen and (max-width: 700px) {
+	.third {
+		width: auto;
+		float: none;
+		margin-right: 0;
+		padding: 0 1%;
+		text-align: center;
+	}
+	.third img {
+		margin: 0 auto 15px auto;
+		display: block;
+	}
+}
+
+
+
+
+
 @media only screen and (max-width: 700px) {
 
+	/* search bar */
+
+	header {
+		padding-top: 32px;
+	}
+
+	body {
+		font-size: 93%;
+	}
+
+	.home #hero {
+		margin-top: 90px;
+	}
+
+	#top #searchform {
+		float: none;
+		position: fixed;
+		top: 15px;
+		right: 10px;
+		z-index: 1000;
+	}
+
+	#logo {
+		margin: 0 auto;
+		display: block;
+	}
+
+	.inner-page #hero img {
+		display: none;
+	}
+
+	main {
+		float: none;
+		width: auto;
+	}
+
+	.blog main, .blog aside, .search main, .archive main {
+		text-align: center;
+	}
+
+	aside {
+		float: none;
+		width: auto;
+	}
+
+
+	.inner-footer ul {
+		height: auto;
+		line-height: inherit;
+	}
+	
+	.inner-footer a {
+		color: #804c1e;
+	}
+	
+	.inner-footer li {
+		float: none;
+		margin: right 0; 
+		list-style-type: none;
+		text-align: center;
+		line-height: 1.5;
+	}
+	
 	/* Navigation Button
 	-------------------------------------------------------- */
 

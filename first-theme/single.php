@@ -35,6 +35,13 @@
     <?php echo wpautop('Sorry, no posts were found!'); ?>
     </h2>
     <?php endif; ?>
+    <!-- Olga: For the next and Previous blog posts, 
+    please add this to your single.php page
+     before calling out the comments_template! -->
+    <span class="next-previous">
+<?php (previous_post_link()) ? '%link' : ''; ?> &nbsp; &nbsp; <?php (next_post_link()) ? '%link' : ''; ?>
+</span>
+
     <?php comments_template(); ?>
 </main> 
 

@@ -29,16 +29,16 @@ function my_theme_scripts() {
     
 
 // Register sidebar for the widgests to display:
-
 function init_widgets() {
 register_sidebar(array(
-    'name' => 'Sidebar Blog',
-    'id' => 'sidebar-blog',
-    'before_widget' => '<div class="inner-widget">',
-    'after_widget' => '</div>',
-    'before_title' => '<h3>',
-    'after_title' => '</h3>'
-    ));
+'name' => 'Sidebar Blog',
+'id' => 'sidebar-blog',
+'before_widget' => '<div class="inner-widget">',
+'after_widget' => '</div>',
+'before_title' => '<h3>',
+'after_title' => '</h3>'
+));
+
 
 register_sidebar(array(
     'name' => 'Sidebar About',
@@ -49,10 +49,28 @@ register_sidebar(array(
     'after_title' => '</h3>'
     ));
 
- register_sidebar(array(
+register_sidebar(array(
     'name' => 'Sidebar Tours',
     'id' => 'sidebar-tours',
     'before_widget' => '<div class="inner-tours">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>'
+    ));
+
+register_sidebar(array(
+    'name' => 'Sidebar Footer',
+    'id' => 'sidebar-footer',
+    'before_widget' => '<div class="row">',
+    'after_widget' => '</div>',
+    'before_title' => '<h3>',
+    'after_title' => '</h3>'
+    ));
+
+register_sidebar(array(
+    'name' => 'Sidebar Contact',
+    'id' => 'sidebar-contact',
+    'before_widget' => '<div class="inner-widget">',
     'after_widget' => '</div>',
     'before_title' => '<h3>',
     'after_title' => '</h3>'
@@ -67,31 +85,13 @@ register_sidebar(array(
         'after_title' => '</h3>'
         ));
 
-register_sidebar(array(
-    'name' => 'Sidebar Footer',
-    'id' => 'sidebar-footer',
-    'before_widget' => '<div class="row">',
-    'after_widget' => '</div>',
-    'before_title' => '<h3>',
-    'after_title' => '</h3>'
-    ));
 
 
 
-register_sidebar(array(
-    'name' => 'Sidebar Tours',
-    'id' => 'sidebar-tours',
-    'before_widget' => '<div class="inner-widget">',
-    'after_widget' => '</div>',
-    'before_title' => '<h3>',
-    'after_title' => '</h3>'
-    ));
 
-
-
-    } // end function init widgets
-    // add action AFTER the function
-    add_action('widgets_init', 'init_widgets');
+} // end function init widgets
+// add action AFTER the function
+add_action('widgets_init', 'init_widgets');
 
     //  Functions to display a list of all the shortcodes
 function diwp_get_list_of_shortcodes(){
@@ -174,3 +174,16 @@ add_shortcode('current_date','today_date');
 add_filter( 'widget_text' , 'do_shortcode' );
 
  
+// Fix to remove additional CLOSING </p> tag after our image:
+remove_filter( 'the_content', 'wpautop' );
+
+
+//Page Slug Body Class
+function add_slug_body_class( $classes ) {
+    global $post;
+    if ( isset( $post ) ) {
+    $classes[] = $post->post_name;
+    }
+    return $classes;
+    }
+    add_filter( 'body_class', 'add_slug_body_class' );

@@ -39,12 +39,12 @@
         about <?php the_title(); ?> </a>
         </span>
        
+</article>   <!-- close article -->
 
-    </article>   <!-- close article -->
     <?php endwhile; ?>
     <?php else : ?>
         <h2>
-Search Results"
+Search Results:
     </h2>
     <p> Sorry, we could not find anyting related to 
         your search terms. Would you like to search again,
@@ -56,10 +56,7 @@ Search Results"
 
 <?php get_sidebar(); ?>
 
-<!-- <aside>
 
-   <p>This is my index.php page! </p>
-</aside>   -->
 
 </div>  <!-- close wrapper -->
 <?php get_footer(); ?>
