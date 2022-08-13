@@ -24,9 +24,23 @@
             <SPAN><B>Posted By:</B><?php the_author();?></SPAN>
             <SPAN><B>Posted On:</B><?php the_time('F j,Y g:i a');?></SPAN>
         </div>   <!-- close meta -->
-        
+        <!-- This snippet was missing, until consultation with professor, may
+        be reason why picture was not displaying in blogs: -->
+        <div class="not-thumbnail">
+            <?php if(has_post_thumbnail()) : ?>
+            <?php the_post_thumbnail(); ?>
+            <?php endif ?>
+        </div>
+        <!-- end thumbnail -->
+
         <?php the_content(); ?>
         
+
+
+
+
+
+
 
     </article>   <!-- close article -->
     <?php endwhile; ?>
@@ -35,7 +49,7 @@
     <?php echo wpautop('Sorry, no posts were found!'); ?>
     </h2>
     <?php endif; ?>
-    <!-- Olga: For the next and Previous blog posts, 
+    <!-- Olga says: For the next and Previous blog posts, 
     please add this to your single.php page
      before calling out the comments_template! -->
     <span class="next-previous">

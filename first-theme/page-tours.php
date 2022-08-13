@@ -14,9 +14,12 @@
 <!-- If we have posts or pages, show them!: -->
     <?php if(have_posts()) : ?>
 
-        <?php if(has_post_thumbnail()) : ?>
-                 <?php the_post_thumbnail(); ?>
-                <?php endif ?>
+<div class="not-thumbnail">
+<?php if(has_post_thumbnail()) : ?>
+<?php the_post_thumbnail(); ?>
+<?php endif ?>
+</div>
+<!-- end thumbnail -->
         <!-- We show the posts by using a while loop in the 
         world of PHP: -->
     <?php while (have_posts()) : the_post() ; ?>

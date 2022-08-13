@@ -7,6 +7,7 @@ function my_excerpt_length() {
 
 add_filter('excerpt_length','my_excerpt_length');
 
+// ask about this. Is this making my pictures small?
 set_post_thumbnail_size(200, 200);
 
 add_theme_support('post-thumbnails');

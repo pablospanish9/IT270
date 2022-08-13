@@ -1,0 +1,62 @@
+/*
+ Theme Name:   Blank Slate Child Theme
+ description: 
+   A child theme of the Blank Slate default WordPress theme
+ Author:       Pablo Sepulveda
+ Template:     blankslate
+ Version:      1.0.0
+*/
+
+body {
+    background: #ddd;
+}
+
+#header {
+  background: tan;
+  width: 200px;
+  height: 100%;
+  position: fixed;
+  top: 0%;
+  left: 0;
+}
+
+#wrapper {
+  max-width: 1200px;
+  margin: 100PX 0 60PX 220PX;
+}
+
+.website-2 {
+  max-width: 800px;
+  margin: 100PX 0 60PX 220PX;
+  line-height:1.3;
+}
+
+#content {
+  width: 63%;
+  float: left;
+  background: beige;
+}
+
+#sidebar {
+  width: 34%;
+  float: right;
+  background: lightpink;
+}
+#footer {
+  clear: both;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+/* typography */
+
+.home h1 {
+  font-size: 3em;
+}
+
+h1 {
+  font-size: 2em;
+  color: purple;
+}
