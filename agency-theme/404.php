@@ -1,0 +1,28 @@
+<?php get_header(); ?>
+<!-- the index.php is assigned to the blog page -->
+<!-- If we have posts or pages, show them!: -->
+<div id="wrapper">
+<!-- add wrong page image -->
+<main>
+    
+    <h2> There is no content in this page</h2>    
+    
+    <p> It looks like nothing was found 
+        in this location! Maybe try a different search</p>
+
+        <?php get_search_form()  ;?>
+   <h3> Or, please feel free to browse our pages</h3>
+
+   <?php wp_list_pages()  ;?>
+
+   
+
+</main> 
+
+
+<aside>
+   <p>This is my 404 page! </p>
+</aside>  
+
+</div>  <!-- close wrapper -->
+<?php get_footer(); ?>
